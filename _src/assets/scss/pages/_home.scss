@@ -1,0 +1,77 @@
+/*---CONTAINER-MAIN--*/
+.page__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+
+/*---LOGO--*/
+.main__awesome-img{
+    margin-top: 95px;
+    width: 250px;
+    height: 63px;
+    background-image: url("../images/awesome-cards.svg");
+    background-size: cover;
+}
+
+/*---TEXTS--*/
+.main__title{
+    margin-top: 35.4px;
+    text-align: center;
+}
+.title__text{
+    color: $color-orange;
+    font-family: 'Merriweather', serif;
+    font-size: rem(19.2);
+    @include text-capitalize;
+    margin-bottom: 0px;
+}
+
+.title_paragraph{
+    color: $color-dark-green-blue;
+    margin-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem(12.8);
+    @include text-capitalize;
+}
+
+/*---ICONS--*/
+.main__icons{
+    margin-top: 17.8px;
+    border: 1.6px solid $color-orange-opacity;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 268px;
+    height: 73.8px;
+    align-items: center;
+    // justify-items: center;
+    text-align: center;
+    .main__icons-item{
+        // padding:10px 0px 15px 20px;
+    }
+    .main__img{
+        color: $color-orange;
+    }
+    .main_text-item{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: $color-gun-metal;
+        font-family: 'Open Sans', sans-serif;
+        font-size: rem(12.8);
+        @include text-capitalize;
+    }
+}
+
+/*---LINK-START--*/
+.main__link{
+    margin-top: 38.6px;
+    padding:10px 20px;
+    border-radius: 21px;
+    background-color: $color-dirty-blue;
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem(16);
+    color: white;
+    text-transform: uppercase;
+}
