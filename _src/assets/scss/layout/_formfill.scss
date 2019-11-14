@@ -1,0 +1,19 @@
+.form {
+    width: 100%;
+    background-image: linear-gradient(to bottom, var(--silver), var(--pale-grey));
+    padding-left: 20px;
+    padding-right:20px;
+    margin:0 auto;
+
+    .fill--title-h1{
+        font-family: $font-family-general;
+        color: $color-gun-metal;
+        font-size: rem(18);
+        background-color:red;
+
+    }
+    .icon {
+        border: 1.6px solid $color-orange-opacity;
+
+    }
+}
