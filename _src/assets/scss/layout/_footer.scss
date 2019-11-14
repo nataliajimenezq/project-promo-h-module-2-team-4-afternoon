@@ -7,13 +7,13 @@
      &__wrapper{
     display:flex;
     flex-direction: column;
-    margin: 18px 41px 20px 41px;
+    margin: 18px 41px 20px;
     height: 100%;
         @media all and (min-width:768px){
          flex-direction: row;
          align-content: center;
          justify-content: space-between;
-         padding: 10px 0 10px; 
+         padding: 10px 0; 
         }
     }
     &__link{
