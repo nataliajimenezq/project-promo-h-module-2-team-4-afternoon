@@ -31,8 +31,7 @@
 }
 
 .fa-trash-alt {
-    z-index: 1;
-    font-size: 12px;
+    font-size: rem(12);
     margin-right: 8px;
 }
 
@@ -47,13 +46,13 @@
 }
 
 .card__box--header {
-  padding: 21px 14px 10px 0;
-}
+    padding: 21px 14px 10px 0;
+  }
 
 .card__box--text {
-  border-left: solid 5px $color-hospital-green;
-  padding-left: 15px;
-}
+    border-left: solid 5px $color-hospital-green;
+    padding-left: 15px;
+  }
 
 .card__name {
     font-family: $font-family-cards;
@@ -84,4 +83,30 @@
     background-image: url('../images/imelda.png');
     background-size: cover;
 }
+
+.card__list {
+    display: flex;
+    justify-content: flex-start;
+    padding:12px 20px 12px;
+    margin:0;
+    min-height:58px;
+    box-sizing:border-box;
+}
+
+.item {
+    width: 32px;
+    height:32px;
+    border:2px solid $color-hospital-green;
+    border-radius: 50%;
+    margin-right:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.image {
+    color: $color-dark-green-blue;
+}
+
 
