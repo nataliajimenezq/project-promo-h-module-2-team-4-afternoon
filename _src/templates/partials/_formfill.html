@@ -1,8 +1,10 @@
-<form class="form" method="post">
+<form class="form">
     <fieldset class="form__fill">
-        <div class="form__fill--title">
-            <i class="icon far fa-keyboard"></i>
+        <div class="fill--title">
+            <i class="far fa-keyboard"></i>
             <h1 class="title__h1">rellena</h1>
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-up"></i>
         </div>
         <div class="fill--inputs">
             <label class="label name" for="name">Nombre completo</label>
@@ -11,10 +13,11 @@
             <label class="label position" for="position">Puesto</label>
             <input class="input position" type="text" id="position" placeholder="Ej: Front-end ">
 
-            <label class="label image" for="image">Imagen de perfil</label>
-            <button class="input image" type="button" id="upload-image">Añadir imagen</button>
-            <div class="show-image"></div>
-
+            <div class="button-image">
+                <label class="label img" for="image">Imagen de perfil</label>
+                <button class="btn" type="button" id="upload-image">Añadir imagen</button>
+                <div class="square"></div>
+            </div>
 
             <label class="label email" for="email">Email</label>
             <input class="input email" type="email" id="email" placeholder="Ej:sally-hill@gmail.com">
@@ -27,7 +30,7 @@
             <input class="input linkedin" type="url" id="name" placeholder="Ej:linkedin.com/in/sally.hill">
 
             <label class="label githun" for="github">Github</label>
-            <input class="input github" type="text" id="name" placeholder="Ej:@sallyt-hill">
+            <input class="input github" type="text" id="name" placeholder="Ej:@sally-hill">
 
 
         </div>
