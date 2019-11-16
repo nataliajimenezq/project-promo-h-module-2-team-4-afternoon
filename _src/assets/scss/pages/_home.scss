@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content:space-around;
+    background-color: $color-white-smoke;
+    height: 85vh;
 }
 
 /*---LOGO--*/
@@ -11,29 +13,49 @@
     margin-top: 95px;
     width: 250px;
     height: 63px;
-    background-image: url("../images/awesome-cards.svg");
-    background-size: cover;
+    .main__awesome-img{
+        background-size: cover;
+    }
+    @include tablet{
+        margin-top: 350px;
+        width: 417px;
+        height: 107px;
+    }
+    @include desktop{
+        margin-top: 5px;
+    }
 }
 
 /*---TEXTS--*/
 .main__title{
     margin-top: 35.4px;
     text-align: center;
+    @include tablet{
+        margin-top: 3px;
+    }
+    @include desktop{
+        margin-top: 1px;
+    }
 }
 .title__text{
     color: $color-orange;
     font-family: 'Merriweather', serif;
     font-size: rem(19.2);
+    font-weight: 900;
+    //height: 24px;
     @include text-capitalize;
     margin-bottom: 0px;
 }
 
 .title_paragraph{
+    width: 264px;
     color: $color-dark-green-blue;
     margin-top: 0px;
+    //height: 38.4px;
     font-family: 'Open Sans', sans-serif;
     font-size: rem(12.8);
     @include text-capitalize;
+    margin: 0 28px;
 }
 
 /*---ICONS--*/
@@ -48,9 +70,16 @@
     align-items: center;
     // justify-items: center;
     text-align: center;
-    .main__icons-item{
-        // padding:10px 0px 15px 20px;
+    // .main__icons-item{
+    //     padding:10px 0px 15px 20px;
+    // }
+    @include tablet{
+        margin-top: 27px; 
     }
+    @include desktop{
+        margin-top: 10px;
+    }
+
     .main__img{
         color: $color-orange;
     }
@@ -62,11 +91,13 @@
         font-size: rem(12.8);
         @include text-capitalize;
     }
+    
 }
 
 /*---LINK-START--*/
 .main__link{
     margin-top: 38.6px;
+    margin-bottom: 60px;
     padding:10px 20px;
     border-radius: 21px;
     background-color: $color-dirty-blue;
@@ -74,4 +105,13 @@
     font-size: rem(16);
     color: white;
     text-transform: uppercase;
+    @include tablet{
+        margin-top: 186px;
+        margin-bottom: 59px;  
+    }
+    @include desktop{
+        margin-top: 10px;
+        margin-bottom: 10px;  
+    }
+    
 }

@@ -3,18 +3,22 @@
     color:$color-brownish-grey;
     font-size: rem(14);
     border-top: 1px solid #d8d8d8;
+    height: 15vh;
 
      &__wrapper{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin: 18px 41px 20px;
+    //margin: 15px 20px 20px;
     height: 100%;
         @include tablet {
-         flex-direction: row;
-         align-content: center;
-         justify-content: space-between;
-         padding: 10px 0; 
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+            padding: 10px 0; 
+        }
+        @include desktop{
+            margin: 0px 40px;
         }
     }
     &__link{
