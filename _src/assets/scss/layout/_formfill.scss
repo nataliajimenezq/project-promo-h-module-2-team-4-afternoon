@@ -9,6 +9,7 @@
 
         .fill--title{
             display:flex;
+<<<<<<< HEAD
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -45,6 +46,42 @@
                 width: 78px;
                 height: 24px;
                 margin: 0;
+=======
+            justify-content: space-between;
+            .contain-title{
+                display: flex;
+
+                .fa-keyboard{
+                    width: 24px;
+                    height: 18px;
+                    color: $color-orange;
+                    padding-top: 14px;
+                }
+                .title__h1{  
+                    font-weight: 600px;
+                    font-family: $font-family-general;
+                    color: $color-gun-metal;
+                    font-size: rem(18);
+                    text-transform: uppercase;
+                    width: 78px;
+                    height: 24px;
+                }
+            }    
+            .arrows { 
+                padding-top: 14px;
+                .fa-chevron-down{
+                    width: 18px;
+                    height: 16px;
+                    color: $color-gun-metal;
+                    font-size: rem(18);
+                }
+                .fa-chevron-up{
+                    width: 18px;
+                    height: 16px;
+                    color: $color-gun-metal;
+                    font-size: rem(18);
+                }
+>>>>>>> 7d0f87f2eedb6bb4a9bd3915cf75c23a85d1211a
             }
         }    
         .fill--inputs{
