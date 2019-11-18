@@ -5,13 +5,12 @@
     align-items: center;
     justify-content: center;
     background-color: $color-white-smoke;
-    min-height: 400px;
     flex-grow: 1;
 }
 
 
 /*---LOGO--*/
-.main__awesome-img{
+.head__awesome-img{
     margin-top: 95px;
     width: 250px;
     height: 63px;
@@ -106,8 +105,7 @@
 
 /*---LINK-START--*/
 .main__link{
-    margin-top: 85px;
-    margin-bottom: 80px;
+    margin: 60px 0;
     padding:10px 20px;
     border-radius: 21px;
     background-color: $color-dirty-blue;
@@ -123,9 +121,5 @@
         background-color: $color-white;
         transform: rotateY(130deg);
     }
-    @include tablet{
-        margin-top: 86px;
-        margin-bottom: 39px; 
-    } 
 }
 
