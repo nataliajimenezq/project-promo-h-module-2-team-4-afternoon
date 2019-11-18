@@ -1,3 +1,5 @@
+@import 'vendors/normalize';
+
 /* core */
 @import 'core/variables';
 @import 'core/mixins';
@@ -5,7 +7,7 @@
 @import 'core/palette-color-js';
 
 /* vendors*/
-@import 'vendors/normalize';
+
 
 /*layout*/
 @import 'layout/base';
