@@ -1,30 +1,28 @@
 .footer{
-    font-family: $font-family-general;
-    color:$color-brownish-grey;
-    font-size: rem(14);
-    border-top: 1px solid #d8d8d8;
-    height: 15vh;
-
-     &__wrapper{
     display:flex;
     flex-direction: column;
     align-items: center;
-    //margin: 15px 20px 20px;
-    height: 100%;
-        @include tablet {
-            flex-direction: row;
-            align-content: center;
-            justify-content: space-between;
-            padding: 10px 0; 
-        }
-        @include desktop{
-            margin: 0px 40px;
-        }
-    }
-    &__link{
-        width: 103px;
+    border-top: 1px solid #d8d8d8;
+    padding: 18px 0 20px 0;
+
+    &__copy{
+        font-family: $font-family-general;
+        color:$color-brownish-grey;
+        font-size: rem(14);
+        opacity: 0.5;
+        line-height: 20px;
     }
     &__logo{
-        width:inherit;
-    }   
+        width: 103px;
+        height: 40px;
+    } 
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 40px;
+    }
+    @include desktop{
+        padding: 9px 40px;
+    }
 }
