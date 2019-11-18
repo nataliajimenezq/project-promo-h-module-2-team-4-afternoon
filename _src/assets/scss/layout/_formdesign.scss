@@ -5,6 +5,9 @@
     padding-right: 20px;
     margin: 0 auto;
     color:$color-gun-metal;
+    @include tablet{
+        width: 50%;
+    }
 
 }
 
@@ -111,5 +114,13 @@
 }
 
 
+//para JS
+.hidden {
+    display: none;
+}
+
+.animate{
+    transform: rotate(180deg);
+}
 
 
