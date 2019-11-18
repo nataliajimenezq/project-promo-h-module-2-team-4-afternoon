@@ -1,24 +1,28 @@
 <form class="form">
-    <fieldset class="share">
-        <div class="share__container">
-            <div class="share__option">
-                <div class="share__btn--tittle">
+    <fieldset class="form__share">
+        <div class="form__share--wrapper">
+            <div class="form__share--container">
+                <div class="form__share--tittle">
                     <i class="fas fa-share-alt"></i>
-                    <h3 class="share__tittle">comparte</h3>
+                    <h3 class="form__share--text">comparte</h3>
                 </div>
-                <div class="shareform__icon">
-                 <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down down"></i>
+                <!---<i class="fas fa-chevron-up click-arrow"></i> -->
+            </div>
+            <div class="share__create">
+                <button type="submit" class="share__create--btn" type="button">
+                    <i class="far fa-address-card"></i>
+                    <h3 class="share__create--tittle btn">crear tarjeta</h3>
+                </button>
             </div>
         </div>
-        <div class="share__create">
-            <button class="share__create--btn" type="button">
-                <i></i>
-                <h3></h3>
-            </button>
-
+        <div class="form__share--wrapper">
+            <div class="share__create">
+                <p class="share__create--text">La tarjeta ha sido creada:</p>
+                <a href="#" class="share__create--link">https://awesome-profile-card.com?id=A456DF0001</a>
+            </div>
+            <a href="https://twitter.com/intent/tweet?text=Check%20out%20my%20profile%20card&hashtag=AdalabDigital,CocoLab"
+                target="_blank" class="share__create--twitter"><i class="fab fa-twitter"></i>Compartir en twitter</a>
         </div>
-        
-        </div>
-
     </fieldset>
 </form>
