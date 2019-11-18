@@ -50,7 +50,7 @@
   }
 
 .card__box--text {
-    border-left: solid 5px $color-hospital-green;
+    border-left: solid 5px $color-dirty-blue;
     padding-left: 15px;
   }
 
@@ -107,6 +107,10 @@
 
 .image {
     color: $color-dark-green-blue;
+}
+
+.hidden {
+    display: none;
 }
 
 
