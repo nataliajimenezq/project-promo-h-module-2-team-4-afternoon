@@ -5,3 +5,9 @@ $defaultFontSize: 16;
 @function rem($pixels) {
     @return ( $pixels / $defaultFontSize * 1rem );
 }
+
+/*
+@function calculate-percentage($target-size, $parent-size) {
+    @return (($target-size / $parent-size) * 100%);
+  }
+  */

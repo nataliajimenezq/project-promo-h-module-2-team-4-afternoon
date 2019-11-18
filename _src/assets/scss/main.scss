@@ -2,12 +2,17 @@
 @import 'core/variables';
 @import 'core/mixins';
 @import 'core/functions';
+@import 'core/palette-color-js';
 
 /* vendors*/
 @import 'vendors/normalize';
 
 /*layout*/
 @import 'layout/base';
+@import 'layout/header';
+@import 'layout/formdesign';
+@import 'layout/footer';
+@import 'layout/cardpreview';
 
 /*pages*/
 @import 'pages/home';
