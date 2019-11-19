@@ -3,18 +3,36 @@
 console.log('>> Ready :)');
 
 //funcion para bajar con click el menu 
-
-const menuDown = document.querySelectorAll ('.down');
-console.log(menuDown);
-const menuArrow = document.querySelectorAll ('.click-arrow');
-
-
-function dropMenu (){
-    menuDown.classList.toggle ('hidden');
-    menuArrow.classList.toggle ('animate');
+//funciona pero no ocula el no clikado //el segundo no se oculta a pesar de tener la clase hidden si quito display flex y web en f12  si ?
+const sectionDown = document.querySelectorAll('.down');
+const arrowElement = document.querySelectorAll('.click-arrow');
+    for (let i = 0; i < arrowElement.length; i++) {
+        arrowElement[i].addEventListener("click", function() {
+        sectionDown[i].classList.toggle('hidden');
+        arrowElement[i].classList.toggle('animate');   
+    });
 }
 
-menuArrow.addEventListener ('click', dropMenu); 
+// const sectionDown = document.querySelectorAll('.down');
+// const arrowElement = document.querySelectorAll('.click-arrow');
+
+// const dropMenu = () => {
+//      for(let i=0; i<arrowElement[i]; i++){
+//         let sectionDownSelect = event.target;
+//         let sectionParentNode = sectionDownSelect.sectionParentNode;
+//         console.log(sectionDownSelect + 'node parent' + sectionParentNode);
+//     }
+// }
+
+
+//     for (let i = 0; i < arrowElement.length; i++) {
+//         arrowElement[i].addEventListener("click", function() {
+//             let sectionDownSelect = event.target;
+//             let sectionParentNode = sectionDownSelect.parentNode;
+//             console.log(sectionDownSelect);
+//             console.log(sectionParentNode);
+//     });
+// }
 
 
 //Función con la que se cambian los estilos de la tarjeta según la paleta de colores que elijamos.
