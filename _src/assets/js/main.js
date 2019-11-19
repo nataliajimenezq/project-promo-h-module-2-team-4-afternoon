@@ -5,6 +5,7 @@ console.log('>> Ready :)');
 //funcion para bajar con click el menu 
 
 const menuDown = document.querySelectorAll ('.down');
+console.log(menuDown);
 const menuArrow = document.querySelectorAll ('.click-arrow');
 
 
@@ -13,10 +14,10 @@ function dropMenu (){
     menuArrow.classList.toggle ('animate');
 }
 
-menuArrow.addEventListener ('click', dropMenu);
+menuArrow.addEventListener ('click', dropMenu); 
 
 
-
+//Función con la que se cambian los estilos de la tarjeta según la paleta de colores que elijamos.
 
 const card = document.querySelector('.card__box');
 
@@ -69,8 +70,8 @@ clickTheme3.addEventListener('click', changeTheme3);
 clickTheme4.addEventListener('click', changeTheme4);
 
 
-/************************************************** */
-// TODO: importar a main.js --> he añadido este js y lo he linkado a manopla.
+/***************************************************/
+//Función para que al introducir los datos en los campos de nombre y trabajo, aparezcan en la tarjeta.
 
 const name = document.querySelector('#name');
 const position = document.querySelector('#position');
@@ -97,3 +98,27 @@ function changeCardPosition() {
 
 name.addEventListener('keyup', changeCardName);
 position.addEventListener('keyup', changeCardPosition);
+
+/**********************************************************************/
+//Función reset
+
+const resetButton = document.querySelector('.card__reset');
+const emailIcon = document.querySelector('.card__list--email');
+const phoneIcon = document.querySelector('.card__list--phone'); 
+const linkedinIcon = document.querySelector('.card__list--linkedin');
+const githubIcon = document.querySelector('.card__list--github');
+
+//const cardName = document.querySelector('.card__name');
+//const cardPosition = document.querySelector('.card__job-title');
+
+function reset () {
+    console.log('función reset');
+    cardName.innerHTML = 'Nombre Apellido';
+    cardPosition.innerHTML = 'Front end developer';
+    emailIcon.classList.add('hidden');
+    phoneIcon.classList.add('hidden');
+    linkedinIcon.classList.add('hidden');
+    githubIcon.classList.add('hidden');
+}
+
+resetButton.addEventListener('click', reset);
