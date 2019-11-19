@@ -13,7 +13,7 @@
             display: flex;
             align-items: center;
             padding-top: 10px;
-            margin-bottom: 10px;
+            padding-bottom: 10px;
 
             .fa-keyboard{
                 width: 24px;
@@ -34,18 +34,9 @@
             }
         }    
         .arrows { 
-            padding-top: 14px;
             .fa-chevron-down{
-                width: 18px;
-                height: 16px;
                 color: $color-gun-metal;
-                font-size: rem(18);
-            }
-            .fa-chevron-up{
-                width: 18px;
-                height: 16px;
-                color: $color-gun-metal;
-                font-size: rem(18);
+               
             }
         }
     }    
