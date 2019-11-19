@@ -79,7 +79,7 @@ function changeCardPosition() {
 name.addEventListener('keyup', changeCardName);
 position.addEventListener('keyup', changeCardPosition);
 
-//.....Mostrar los iconos del card preview....//
+//..........Mostrar los iconos del card preview........//
 
 const emailIcon = document.querySelector('.card__list--email');
 const phoneIcon = document.querySelector('.card__list--phone');
