@@ -13,28 +13,6 @@ for (let i = 0; i < arrowElement.length; i++) {
     });
 }
 
-// const sectionDown = document.querySelectorAll('.down');
-// const arrowElement = document.querySelectorAll('.click-arrow');
-
-// const dropMenu = () => {
-//      for(let i=0; i<arrowElement[i]; i++){
-//         let sectionDownSelect = event.target;
-//         let sectionParentNode = sectionDownSelect.sectionParentNode;
-//         console.log(sectionDownSelect + 'node parent' + sectionParentNode);
-//     }
-// }
-
-
-//     for (let i = 0; i < arrowElement.length; i++) {
-//         arrowElement[i].addEventListener("click", function() {
-//             let sectionDownSelect = event.target;
-//             let sectionParentNode = sectionDownSelect.parentNode;
-//             console.log(sectionDownSelect);
-//             console.log(sectionParentNode);
-//     });
-// }
-
-
 //Función con la que se cambian los estilos de la tarjeta según la paleta de colores que elijamos.
 
 const card = document.querySelector('.card__box');
@@ -142,9 +120,7 @@ function reset() {
 resetButton.addEventListener('click', reset);
 //..........Mostrar los iconos del card preview........//
 
-const emailIcon = document.querySelector('.card__list--email');
-const phoneIcon = document.querySelector('.card__list--phone');
-const linkedinIcon = document.querySelector('.card__list--linkedin');
+
 const gitIcon = document.querySelector('.card__list--github');
 
 
