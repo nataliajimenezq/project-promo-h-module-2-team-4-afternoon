@@ -5,22 +5,31 @@ console.log('>> Ready :)');
 //funcion para bajar con click el menu 
 //funciona pero no ocula el no clikado //el segundo no se oculta a pesar de tener la clase hidden si quito display flex y web en f12  si ?
 
-
 const sectionDown = document.querySelectorAll('.down');
 const arrowElement = document.querySelectorAll('.click-arrow');
-
-    for (let i = 0; i < arrowElement.length; i++) {
-        arrowElement[i].addEventListener("click", function(event) {
-            if(arrowElement[i] !== event.currentTarget){
-
-                arrowElement[i].closest('.down').classList.remove('hidden');
-                // sectionDown[i].classList.remove('hidden');
-                arrowElement[i].classList.toggle('animate');
-            }
-                
-        // sectionDown[i].classList.toggle('hidden');
+for (let i = 0; i < arrowElement.length; i++) {
+    arrowElement[i].addEventListener("click", function () {
+        sectionDown[i].classList.toggle('hidden');
+        arrowElement[i].classList.toggle('animate');
     });
-    }
+}
+
+
+// const sectionDown = document.querySelectorAll('.down');
+// const arrowElement = document.querySelectorAll('.click-arrow');
+
+//     for (let i = 0; i < arrowElement.length; i++) {
+//         arrowElement[i].addEventListener("click", function(event) {
+//             if(arrowElement[i] !== event.currentTarget){
+
+//                 arrowElement[i].closest('.down').classList.remove('hidden');
+//                 // sectionDown[i].classList.remove('hidden');
+//                 arrowElement[i].classList.toggle('animate');
+//             }
+                
+//         // sectionDown[i].classList.toggle('hidden');
+//     });
+//     }
 
 // const sectionDown = document.querySelectorAll('.down');
 // const arrowElement = document.querySelectorAll('.click-arrow');
