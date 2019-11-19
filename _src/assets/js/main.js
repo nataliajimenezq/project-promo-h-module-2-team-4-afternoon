@@ -4,7 +4,8 @@ console.log('>> Ready :)');
 
 //funcion para bajar con click el menu 
 //funciona pero no ocula el no clikado //el segundo no se oculta a pesar de tener la clase hidden si quito display flex y web en f12  si ?
-const sectionDown = document.querySelectorAll('.down');
+/*
+const sectionDown = document.querySelectorAll('.down-form');
 const arrowElement = document.querySelectorAll('.click-arrow');
 for (let i = 0; i < arrowElement.length; i++) {
     arrowElement[i].addEventListener("click", function () {
@@ -12,6 +13,44 @@ for (let i = 0; i < arrowElement.length; i++) {
         arrowElement[i].classList.toggle('animate');
     });
 }
+*/
+
+const elementFirstForm = document.querySelector ('#first-form');
+const elementSeconsForm = document.querySelector ('#second-form');
+const elementThirdForm = document.querySelector ('#third-form');
+
+const elementArrowDesign = document.querySelector ('#arrow-design');
+const elementArrowFill = document.querySelector ('#arrow-fill');
+const elementArrowShare = document.querySelector ('#arrow-share');
+
+
+const closeForm = () =>{
+        elementFirstForm.classList.toggle('hidden');
+        elementArrowDesign.classList.toggle('animate');  
+};
+elementArrowDesign.addEventListener("click", closeForm);
+
+
+const closeFill = () =>{
+    elementFirstForm.classList.add('hidden');
+    elementSeconsForm.classList.toggle('hidden');
+    elementArrowDesign.classList.remove('animate')
+    elementArrowFill.classList.toggle('animate');
+
+}
+elementArrowFill.addEventListener("click", closeFill );
+
+const closeShare = () =>{
+    elementSeconsForm.classList.add('hidden');
+    elementThirdForm.classList.toggle('hidden');
+    elementArrowFill.classList.remove('animate')
+    elementArrowShare.classList.toggle('animate');
+
+}
+
+elementArrowShare.addEventListener("click", closeShare );
+
+
 
 //Función con la que se cambian los estilos de la tarjeta según la paleta de colores que elijamos.
 
