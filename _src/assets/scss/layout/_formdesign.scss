@@ -7,6 +7,12 @@
     color:$color-gun-metal;
     @include tablet{
         width: 50%;
+        padding-left: 40px;
+        padding-right: 30px;
+    }
+    @include desktop {
+        width: 25%;
+        min-width: 350px;
     }
 
 }
