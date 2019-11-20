@@ -115,6 +115,11 @@ function reset() {
     phoneIcon.classList.add('hidden');
     linkedinIcon.classList.add('hidden');
     githubIcon.classList.add('hidden');
+    card.classList.remove('theme-colors2');
+    card.classList.remove('theme-colors3');
+    card.classList.remove('theme-colors1');
+    card.classList.add('theme-colors4');
+
 }
 
 resetButton.addEventListener('click', reset);
