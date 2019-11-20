@@ -119,8 +119,18 @@ function reset() {
     card.classList.remove('theme-colors3');
     card.classList.remove('theme-colors1');
     card.classList.add('theme-colors4');
-
+    inputEmail.value = '';
+    inputPhone.value = '';
+    inputLinkedin.value = '';
+    inputGit.value = '';
+    name.value = '';
+    position.value = '';
+    clickTheme4.checked = true;
+    clickTheme1.checked = false;
+    clickTheme2.checked = false;
+    clickTheme3.checked = false;
 }
+//TODO: resetear pestañas formulario 
 
 resetButton.addEventListener('click', reset);
 //..........Mostrar los iconos del card preview........//
