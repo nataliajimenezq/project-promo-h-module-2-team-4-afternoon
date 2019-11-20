@@ -4,8 +4,9 @@ html{
 }
 
 .page{
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .main{
@@ -14,4 +15,7 @@ html{
     display: flex;
     flex-direction: row-reverse;
     }
+}
+.hidden {
+    display: none;
 }
