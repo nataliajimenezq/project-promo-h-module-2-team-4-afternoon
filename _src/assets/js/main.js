@@ -26,7 +26,11 @@ const elementArrowShare = document.querySelector ('#arrow-share');
 
 const closeForm = () =>{
         elementFirstForm.classList.toggle('hidden');
-        elementArrowDesign.classList.toggle('animate');  
+        elementArrowDesign.classList.toggle('animate'); 
+        elementThirdForm.classList.add('hidden');
+        shareForm.classList.add('hidden');
+        elementArrowShare.classList.remove('animate')
+
 };
 elementArrowDesign.addEventListener("click", closeForm);
 
@@ -37,6 +41,7 @@ const closeFill = () =>{
     elementArrowDesign.classList.remove('animate')
     elementArrowFill.classList.toggle('animate');
 
+
 }
 elementArrowFill.addEventListener("click", closeFill );
 
@@ -45,6 +50,7 @@ const closeShare = () =>{
     elementThirdForm.classList.toggle('hidden');
     elementArrowFill.classList.remove('animate')
     elementArrowShare.classList.toggle('animate');
+    shareForm.classList.add('hidden');
 
 }
 
@@ -53,7 +59,7 @@ elementArrowShare.addEventListener("click", closeShare );
 
 //boton crear tarjeta
 const shareButton = document.querySelector ('#share_btn');
-const shareForm = document.querySelector ('.form__share--wrapper');
+const shareForm = document.querySelector ('#share-div');
 
 const openShare = () => {
     console.log ('holllllll');
