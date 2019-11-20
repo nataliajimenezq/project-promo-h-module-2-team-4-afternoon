@@ -51,6 +51,20 @@ const closeShare = () =>{
 elementArrowShare.addEventListener("click", closeShare );
 
 
+//boton crear tarjeta
+const shareButton = document.querySelector ('#share_btn');
+const shareForm = document.querySelector ('.form__share--wrapper');
+
+const openShare = () => {
+    console.log ('holllllll');
+    shareForm.classList.remove('hidden');
+    
+}
+
+shareButton.addEventListener ('click', openShare);
+
+
+
 
 //Función con la que se cambian los estilos de la tarjeta según la paleta de colores que elijamos.
 
