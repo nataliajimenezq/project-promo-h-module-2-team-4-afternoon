@@ -1,19 +1,19 @@
 'use strict';
 
-console.log('>> Ready :)');
+// console.log('>> Ready :)');
 
-//funcion para bajar con click el menu 
-//funciona pero no ocula el no clikado //el segundo no se oculta a pesar de tener la clase hidden si quito display flex y web en f12  si ?
+//función para bajar con click el menu 
+
 const sectionDown = document.querySelectorAll('.down');
 const arrowElement = document.querySelectorAll('.click-arrow');
+const arrowClickElement = document.querySelectorAll('.arrow');
+
 for (let i = 0; i < arrowElement.length; i++) {
     arrowElement[i].addEventListener("click", function () {
         sectionDown[i].classList.toggle('hidden');
-        arrowElement[i].classList.toggle('animate');
+        arrowClickElement[i].classList.toggle('animate');
     });
 }
-
-//Función con la que se cambian los estilos de la tarjeta según la paleta de colores que elijamos.
 
 const card = document.querySelector('.card__box');
 
