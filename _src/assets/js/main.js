@@ -3,7 +3,7 @@
 // console.log('>> Ready :)');
 
 //función para bajar con click el menu 
-
+/*
 const sectionDown = document.querySelectorAll('.down');
 const arrowElement = document.querySelectorAll('.click-arrow');
 const arrowClickElement = document.querySelectorAll('.arrow');
@@ -14,6 +14,64 @@ for (let i = 0; i < arrowElement.length; i++) {
         arrowClickElement[i].classList.toggle('animate');
     });
 }
+*/
+
+const elementFirstForm = document.querySelector ('#first-form');
+const elementSeconsForm = document.querySelector ('#second-form');
+const elementThirdForm = document.querySelector ('#third-form');
+
+const elementArrowDesign = document.querySelector ('#arrow-design');
+const elementArrowFill = document.querySelector ('#arrow-fill');
+const elementArrowShare = document.querySelector ('#arrow-share');
+
+
+const closeForm = () =>{
+        elementFirstForm.classList.toggle('hidden');
+        elementArrowDesign.classList.toggle('animate'); 
+        elementThirdForm.classList.add('hidden');
+        shareForm.classList.add('hidden');
+        elementArrowShare.classList.remove('animate')
+
+};
+elementArrowDesign.addEventListener("click", closeForm);
+
+
+const closeFill = () =>{
+    elementFirstForm.classList.add('hidden');
+    elementSeconsForm.classList.toggle('hidden');
+    elementArrowDesign.classList.remove('animate')
+    elementArrowFill.classList.toggle('animate');
+
+
+}
+elementArrowFill.addEventListener("click", closeFill );
+
+const closeShare = () =>{
+    elementSeconsForm.classList.add('hidden');
+    elementThirdForm.classList.toggle('hidden');
+    elementArrowFill.classList.remove('animate')
+    elementArrowShare.classList.toggle('animate');
+    shareForm.classList.add('hidden');
+
+}
+
+elementArrowShare.addEventListener("click", closeShare );
+
+
+//boton crear tarjeta
+const shareButton = document.querySelector ('#share_btn');
+const shareForm = document.querySelector ('#share-div');
+
+const openShare = () => {
+    console.log ('holllllll');
+    shareForm.classList.remove('hidden');
+    
+}
+
+shareButton.addEventListener ('click', openShare);
+
+
+
 
 const card = document.querySelector('.card__box');
 
@@ -115,7 +173,22 @@ function reset() {
     phoneIcon.classList.add('hidden');
     linkedinIcon.classList.add('hidden');
     githubIcon.classList.add('hidden');
+    card.classList.remove('theme-colors2');
+    card.classList.remove('theme-colors3');
+    card.classList.remove('theme-colors1');
+    card.classList.add('theme-colors4');
+    inputEmail.value = '';
+    inputPhone.value = '';
+    inputLinkedin.value = '';
+    inputGit.value = '';
+    name.value = '';
+    position.value = '';
+    clickTheme4.checked = true;
+    clickTheme1.checked = false;
+    clickTheme2.checked = false;
+    clickTheme3.checked = false;
 }
+//TODO: resetear pestañas formulario 
 
 resetButton.addEventListener('click', reset);
 //..........Mostrar los iconos del card preview........//
