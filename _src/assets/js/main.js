@@ -1,4 +1,32 @@
-'use strict';
+//'use strict';
+/*
+Código de Stefany para bucle que cambiar color en la tarjeta:
+
+let pcolor = document.querySelector('.color');
+let radioColors = document.getElementsByName('color');
+function changeColor() {
+    for(let i = 0; i <= 2; i++){
+        if(radioColors[0].checked && radioColors[0].value === 'blue'){
+            pcolor.classList.remove('yellow');
+            pcolor.classList.remove('red');
+            pcolor.classList.add('blue');
+        }else if(radioColors[1].checked && radioColors[1].value === 'red'){
+            pcolor.classList.remove('yellow');
+            pcolor.classList.remove('blue');
+            pcolor.classList.add('red');
+        }else if(radioColors[2].checked && radioColors[2].value === 'yellow'){
+            pcolor.classList.remove('blue');
+            pcolor.classList.remove('red');
+            pcolor.classList.add('yellow');
+        }
+    }
+}
+document.addEventListener('click', changeColor);
+***********************************************************************************************
+
+AQUÍ EMPIEZA NUESTRO ARCHIVO MAIN.JS
+***********************************************************************************************
+***********************************************************************************************
 
 // console.log('>> Ready :)');
 
@@ -14,7 +42,7 @@ for (let i = 0; i < arrowElement.length; i++) {
         arrowClickElement[i].classList.toggle('animate');
     });
 }
-*/
+
 
 const elementFirstForm = document.querySelector ('#first-form');
 const elementSeconsForm = document.querySelector ('#second-form');
@@ -71,7 +99,8 @@ const openShare = () => {
 shareButton.addEventListener ('click', openShare);
 
 
-
+//*****************************************************************
+//Función para cambiar los colores de la tarjeta
 
 const card = document.querySelector('.card__box');
 
@@ -124,7 +153,7 @@ clickTheme3.addEventListener('click', changeTheme3);
 clickTheme4.addEventListener('click', changeTheme4);
 
 
-/***************************************************/
+/***************************************************
 //Función para que al introducir los datos en los campos de nombre y trabajo, aparezcan en la tarjeta.
 
 const name = document.querySelector('#name');
@@ -153,7 +182,7 @@ function changeCardPosition() {
 name.addEventListener('keyup', changeCardName);
 position.addEventListener('keyup', changeCardPosition);
 
-/**********************************************************************/
+/**********************************************************************
 //Función reset
 
 const resetButton = document.querySelector('.card__reset');
@@ -188,11 +217,12 @@ function reset() {
     clickTheme2.checked = false;
     clickTheme3.checked = false;
 }
-//TODO: resetear pestañas formulario 
 
 resetButton.addEventListener('click', reset);
-//..........Mostrar los iconos del card preview........//
 
+
+//****************************************************************************************
+//..........Mostrar los iconos del card preview........//
 
 const gitIcon = document.querySelector('.card__list--github');
 
@@ -236,3 +266,7 @@ inputEmail.addEventListener('keyup', showIconMail);
 inputPhone.addEventListener('keyup', showIconPhone);
 inputLinkedin.addEventListener('keyup', showIconLinkedin);
 inputGit.addEventListener('keyup', showIconGit);
+*/
+
+
+
