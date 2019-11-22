@@ -1,6 +1,8 @@
 .page__cardpreview {
     height: 457px;
-    background: linear-gradient(to bottom, $color-silver, $color-pale-grey);
+    background-image: url('../images/fondo.png');
+    background-size: cover;
+    //background: linear-gradient(to bottom, $color-silver, $color-pale-grey);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +26,7 @@
 .card__reset {
     width: 75px;
     height: 30px;
-    background-color: transparent;
+    background-color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 15px;
     color: $color-gun-metal;
