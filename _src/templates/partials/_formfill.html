@@ -1,18 +1,18 @@
-<fieldset class="form__fill">
-    <div class="fill--title click-arrow">
+<fieldset class="form__fill collapsible close">
+    <div class="fill--title collapsible-header">
         <div class="contain-title">
             <i class="far fa-keyboard"></i>
             <h3 class="title__h3">rellena</h3>
         </div>
-            <i class="fas fa-chevron-down click-arrow" id="arrow-fill"></i>
+        <i class="fas fa-chevron-down click-arrow" id="arrow-fill"></i>
     </div>
     <div class="down-form hidden" id="second-form">
         <div class="fill--inputs">
             <label class="label name" for="name">Nombre completo</label>
-            <input class="input name" type="text" id="name" placeholder="Ej: Sally Jill">
+            <input class="input name" type="text" id="name" placeholder="Ej: Sally Jill" required>
 
             <label class="label position" for="position">Puesto</label>
-            <input class="input position" type="text" id="position" placeholder="Ej: Front-end ">
+            <input class="input position" type="text" id="position" placeholder="Ej: Front-end" required>
 
             <div class="button-image">
                 <label class="label img" for="image">Imagen de perfil</label>
@@ -21,17 +21,17 @@
             </div>
 
             <label class="label email" for="email">Email</label>
-            <input class="input email" type="email" id="email" placeholder="Ej:sally-hill@gmail.com">
+            <input class="input email" type="email" id="email" placeholder="Ej:sally-hill@gmail.com" required>
 
             <label class="label phone" for="phone">Teléfono</label>
             <input class="input phone" type="tel" id="phone" placeholder="Ej:555-55-55-55">
 
 
             <label class="label linkedin" for="linkedin">Linkedin</label>
-            <input class="input linkedin" type="url" id="linkedin" placeholder="Ej:linkedin.com/in/sally.hill">
+            <input class="input linkedin" type="url" id="linkedin" placeholder="Ej:linkedin.com/in/sally.hill" required>
 
             <label class="label githun" for="github">Github</label>
-            <input class="input github" type="text" id="git" placeholder="Ej:@sally-hill">
+            <input class="input github" type="text" id="git" placeholder="Ej:@sally-hill" required>
 
 
         </div>
