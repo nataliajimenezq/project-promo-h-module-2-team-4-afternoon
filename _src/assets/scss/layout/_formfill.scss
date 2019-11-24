@@ -16,12 +16,9 @@
             @include tablet {
                 padding-bottom: 7px;
              }
-
             .fa-keyboard{
-                
                 height: 16px;
-                color: $color-orange;
-                
+                color: $color-orange;   
             }
             .title__h3{  
                 font-weight: 500;
@@ -33,14 +30,11 @@
                 padding-left: 10px;
                 margin: 0;
             }
-        }    
-        .arrows { 
             .fa-chevron-down{
-                color: $color-gun-metal;
-               
+                color: $color-gun-metal;  
             }
-        }
-    }    
+        }   
+    } 
     .fill--inputs{
         display:flex;
         flex-direction: column;
@@ -74,7 +68,7 @@
             }
             .btn{
                 background-color: $color-orange;
-                color: #ffffff;
+                color: $color-white;
                 border-radius: 3px;
                 border: none;
                 height: 30px;
@@ -92,11 +86,8 @@
                 grid-column: 2;
                 margin-left: 15px;
                 background-image: url('../images/imelda.png');
-                background-size: cover
-                   
-            }
-            
-            
+                background-size: cover      
+            }   
         }   
     }
 }

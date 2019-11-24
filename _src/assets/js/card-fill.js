@@ -36,7 +36,6 @@ const inputPhone = document.querySelector('#phone');
 const inputLinkedin = document.querySelector('#linkedin');
 const inputGit = document.querySelector('#git');
 
-
 function showIconMail() {
 
     if (inputEmail.value.length > 0) {
@@ -66,7 +65,7 @@ function showIconGit() {
 }
 
 
-inputEmail.addEventListener('keyup', showIconMail);
-inputPhone.addEventListener('keyup', showIconPhone);
-inputLinkedin.addEventListener('keyup', showIconLinkedin);
-inputGit.addEventListener('keyup', showIconGit);
+inputEmail.addEventListener('keyup', showIcons);
+inputPhone.addEventListener('keyup', showIcons);
+inputLinkedin.addEventListener('keyup', showIcons);
+inputGit.addEventListener('keyup', showIcons);
