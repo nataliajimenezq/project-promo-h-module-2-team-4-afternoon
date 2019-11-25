@@ -2,7 +2,7 @@
 .form__share{
     padding:0;
     border:none;
-    margin:0;
+    
 
     &--wrapper{
         border-bottom: 1px solid $color-white-two;
@@ -12,6 +12,7 @@
     }
 
     &--container{
+        margin: 0px;
         display:flex;
         flex-direction: row;
         justify-content: space-between;
@@ -21,6 +22,9 @@
              flex-direction: row;   
              padding-top: 10px;
              padding-bottom: 10px;
+             @include tablet {
+                padding-bottom: 7px;
+             }
               
             .form__share--text{
             font-size:rem(18);
@@ -37,21 +41,25 @@
     padding-left: 2px;
     color:$color-orange;
 }
-.fa-address-card{
-    color:white;
+.fa-address-card , .form__share--text.btn{
+    color: $color-white;
 }
 .fa-twitter{
     padding-right: 9.5px;
 }
 
-.form__share--text.btn{
-    color:white;
-}
 .fa-chevron-down {
     padding-top: 14px;
 }
+.form__create-link {
+    margin: 0; 
+    display:flex;
+    flex-direction: column;
+    border-top: 1px solid $color-white-two;
+}
 .share__create{
-   text-align: center;
+   
+    text-align: center;
     &--btn{
         width:199px;
         height: 50px;
@@ -65,41 +73,43 @@
         margin: 20px auto 30px;
         box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
         
-    }
-    &--disabled{
-    background-color:none}
-    
+    }    
     &--tittle{
         font-size:rem(18);
-        color:white;
+        color: $color-white;
         margin:0;
         padding-left:10px;
         text-transform: uppercase;
         font-weight: 500;
     }
-    &--text{
-        font-size: rem(18);
-        margin-top:20px;
-        margin-bottom: 5px;
-    }
-    &--link{
-        color:$color-orange;
-        font-size:12px;
-        margin:0;
-        text-align: center;
-        }
-    &--twitter{
-        background-color:$color-azure;
-        color:#ffffff;
-        border-radius:3px;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-        font-size:rem(14);
-        line-height: 20px;
-        width:181px;
-        padding:3px 9px 7px 3px;
-        margin-top:10px;
-        margin-bottom:30px;
-        align-self:center;    
-    }
-    
 }
+.share__create-card{
+        &--text{
+            text-align: center;
+            font-size: rem(18);
+            margin-top:20px;
+            margin-bottom: 5px;
+        }
+        &--link{
+            color:$color-orange;
+            font-size:12px;
+            margin:0;
+            text-align: center;
+            }
+        &--twitter{
+            text-align: center;
+            background-color:$color-azure;
+            color: $color-white;
+            border-radius:3px;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+            font-size:rem(14);
+            line-height: 20px;
+            width:181px;
+            padding:3px 9px 7px 3px;
+            margin-top:10px;
+            margin-bottom:30px;
+            align-self:center;    
+        }
+}
+    
+

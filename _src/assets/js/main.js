@@ -217,7 +217,6 @@ function reset() {
     clickTheme2.checked = false;
     clickTheme3.checked = false;
 }
-//TODO: resetear pestañas formulario 
 
 resetButton.addEventListener('click', reset);
 
