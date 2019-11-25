@@ -65,7 +65,7 @@ function showIconGit() {
 }
 
 
-inputEmail.addEventListener('keyup', showIcons);
-inputPhone.addEventListener('keyup', showIcons);
-inputLinkedin.addEventListener('keyup', showIcons);
-inputGit.addEventListener('keyup', showIcons);
+inputEmail.addEventListener('keyup', showIconMail);
+inputPhone.addEventListener('keyup', showIconPhone);
+inputLinkedin.addEventListener('keyup', showIconLinkedin);
+inputGit.addEventListener('keyup', showIconGit);
