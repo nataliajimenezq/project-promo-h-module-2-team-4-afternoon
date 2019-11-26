@@ -1,4 +1,4 @@
-<fieldset class="form__fill collapsible close">
+<fieldset class="form__fill collapsible">
     <div class="fill--title collapsible-header">
         <div class="contain-title">
             <i class="far fa-keyboard"></i>
@@ -6,7 +6,7 @@
         </div>
         <i class="fas fa-chevron-down click-arrow" id="arrow-fill"></i>
     </div>
-    <div class="down-form hidden" id="second-form">
+    <div class="collapsible-container" id="second-form">
         <div class="fill--inputs">
             <label class="label name" for="name">Nombre completo</label>
             <input class="input name" type="text" id="name" placeholder="Ej: Sally Jill" required>
@@ -18,7 +18,7 @@
                 <label class="label img" for="image">Imagen de perfil</label>
                 <button class="btn js__profile-trigger" type="button"  id="upload-image">Añadir imagen</button>
                 <input type="file" name="" id="img-selector" class="btn action__hiddenField js__profile-upload-btn">
-                <div class="square js__profile-preview"></div> 
+                <div class="square js__profile-preview"></div>
             </div>
 
             <label class="label email" for="email">Email</label>

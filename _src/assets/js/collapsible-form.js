@@ -1,58 +1,29 @@
 'use strict';
 
-// console.log('>> Ready :)');
-
-//función para bajar con click el menu 
-/*
-const sectionDown = document.querySelectorAll('.down');
+//Creamos la función handler genérica
+//Seleccionamos de manera global los tres collapsables
+const collapsibles = document.querySelectorAll('.collapsible-header');
 const arrowElement = document.querySelectorAll('.click-arrow');
-const arrowClickElement = document.querySelectorAll('.arrow');
+const openCollapsable = (event) => {
+    //guardamos en una variable el padre donde ocurre el evento
+    const selectedCollapsable = event.currentTarget.parentElement;
+    //recorremos todos los collapsables
+    for (let i = 0; i < collapsibles.length; i++) {
+      //recogemos el padre del collapsable activo en el bucle
+      const parentElement = collapsibles[i].parentElement;
+      //si el padre activo en el bucle coincide con el padre del evento
+      if (selectedCollapsable === parentElement) {
+        //si está abierto se cierra y si no se abre
+        selectedCollapsable.classList.toggle('collapsible');
+        arrowElement[i].classList.toggle('animate');
 
-for (let i = 0; i < arrowElement.length; i++) {
-    arrowElement[i].addEventListener("click", function () {
-        sectionDown[i].classList.toggle('hidden');
-        arrowClickElement[i].classList.toggle('animate');
-    });
-}
-*/
-
-const elementFirstForm = document.querySelector ('#first-form');
-const elementSeconsForm = document.querySelector ('#second-form');
-const elementThirdForm = document.querySelector ('#third-form');
-
-const elementArrowDesign = document.querySelector ('#arrow-design');
-const elementArrowFill = document.querySelector ('#arrow-fill');
-const elementArrowShare = document.querySelector ('#arrow-share');
-
-
-const closeForm = () =>{
-        elementFirstForm.classList.toggle('hidden');
-        elementArrowDesign.classList.toggle('animate'); 
-        elementThirdForm.classList.add('hidden');
-        shareForm.classList.add('hidden');
-        elementArrowShare.classList.remove('animate')
-
-};
-elementArrowDesign.addEventListener("click", closeForm);
-
-
-const closeFill = () =>{
-    elementFirstForm.classList.add('hidden');
-    elementSeconsForm.classList.toggle('hidden');
-    elementArrowDesign.classList.remove('animate')
-    elementArrowFill.classList.toggle('animate');
-
-
-}
-elementArrowFill.addEventListener("click", closeFill );
-
-const closeShare = () =>{
-    elementSeconsForm.classList.add('hidden');
-    elementThirdForm.classList.toggle('hidden');
-    elementArrowFill.classList.remove('animate')
-    elementArrowShare.classList.toggle('animate');
-    shareForm.classList.add('hidden');
-
-}
-
-elementArrowShare.addEventListener("click", closeShare );
+      } else {
+        //si no coincide se cierra
+        parentElement.classList.add('collapsible');
+      }
+    }
+  };
+  for (let i = 0; i < collapsibles.length; i++) {
+    collapsibles[i].addEventListener('click', openCollapsable);
+  }
+  
