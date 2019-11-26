@@ -20,6 +20,7 @@ const openCollapsable = (event) => {
       } else {
         //si no coincide se cierra
         parentElement.classList.add('collapsible');
+        arrowElement[i].classList.remove('animate');
       }
     }
   };
