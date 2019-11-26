@@ -1,7 +1,7 @@
 //Función para cambiar los colores de la tarjeta
 
 const card = document.querySelector('.card__box');
-let colorpalette = document.getElementsByName('colorpalette');
+let colorpalette = document.getElementsByName('palette');
 
 console.log(card);
 
