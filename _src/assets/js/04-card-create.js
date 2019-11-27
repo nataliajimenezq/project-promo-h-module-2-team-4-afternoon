@@ -23,6 +23,13 @@ const validation = () => {
   return !hasErrors;
 };
 
+/* function removeError (ev){
+  for (let input of elementInputs) {
+  ev.currentTarget();
+ input.classList.remove('error');
+}
+}
+elementInputs.addEventListener('keyup',removeError); */
 
 const sendInfo = () => {
   if (validation()) {
@@ -38,4 +45,29 @@ const sendInfo = () => {
 
 shareButton.addEventListener('click', sendInfo);
 
+const userData = {
 
+  "palette": paletteValue,
+  "name": nameValue,
+  "job": jobValue,
+  "phone": phoneValue,
+  "linkedin": linkedinValue,
+  "github": githubValue,
+  
+};
+
+//peticion
+
+function sendFetch (){
+fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+  method: 'POST',
+  body: JSON.stringify(userData),
+  headers: {
+    'content-type': 'application/json'
+  },
+})
+.then(respose => Response.json())
+.then (data => showUrlUser(data))
+.catch (function (error) {console.log(error);});
+
+}
