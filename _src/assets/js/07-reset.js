@@ -1,3 +1,5 @@
+'use strict';
+
 //Función reset
 
 const resetButton = document.querySelector('.card__reset');
@@ -27,10 +29,12 @@ function reset() {
     inputGit.value = '';
     name.value = '';
     position.value = '';
-    clickTheme4.checked = true;
-    clickTheme1.checked = false;
-    clickTheme2.checked = false;
-    clickTheme3.checked = false;
+    // clickTheme4.checked = true;
+    // clickTheme1.checked = false;
+    // clickTheme2.checked = false;
+    // clickTheme3.checked = false;
+
+    resetData();
 }
 
 resetButton.addEventListener('click', reset);
