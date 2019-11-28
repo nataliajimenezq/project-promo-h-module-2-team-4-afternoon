@@ -3,13 +3,15 @@
 //Función reset
 
 const resetButton = document.querySelector('.card__reset');
-const emailIcon = document.querySelector('.card__list--email');
-const phoneIcon = document.querySelector('.card__list--phone');
-const linkedinIcon = document.querySelector('.card__list--linkedin');
-const githubIcon = document.querySelector('.card__list--github');
+// const emailIcon = document.querySelector('.card__list--email');
+// const phoneIcon = document.querySelector('.card__list--phone');
+// const linkedinIcon = document.querySelector('.card__list--linkedin');
+// const githubIcon = document.querySelector('.card__list--github');
 
-//const cardName = document.querySelector('.card__name');
+const cardPhoto = document.querySelector('.card__photo');
 //const cardPosition = document.querySelector('.card__job-title');
+
+
 
 function reset() {
     console.log('función reset');
@@ -29,12 +31,13 @@ function reset() {
     inputGit.value = '';
     name.value = '';
     position.value = '';
-    // clickTheme4.checked = true;
-    // clickTheme1.checked = false;
-    // clickTheme2.checked = false;
-    // clickTheme3.checked = false;
-
-    resetData();
+    clickTheme4.checked = true;
+    clickTheme1.checked = false;
+    clickTheme2.checked = false;
+    clickTheme3.checked = false;
+    cardPhoto.classList.add('card__photo');
+    localStorage.removeItem('data');
 }
+
 
 resetButton.addEventListener('click', reset);
