@@ -2,8 +2,8 @@
 
 const name = document.querySelector('#name');
 const position = document.querySelector('#position');
-// const cardName = document.querySelector('.card__name');
-// const cardPosition = document.querySelector('.card__job-title');
+const cardName = document.querySelector('.card__name');
+const cardPosition = document.querySelector('.card__job-title');
 
 function changeCardName() {
     console.log('llamando a changeCardText');
@@ -26,7 +26,7 @@ function changeCardPosition() {
 name.addEventListener('keyup', changeCardName);
 position.addEventListener('keyup', changeCardPosition);
 
-//..........Mostrar los iconos del card preview........//
+//Añadir los enlaces a los iconos y mostrarlos en el card preview
 
 
 const inputEmail = document.querySelector('#email');
