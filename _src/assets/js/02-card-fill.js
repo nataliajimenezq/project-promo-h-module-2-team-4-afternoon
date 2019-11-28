@@ -2,8 +2,8 @@
 
 const name = document.querySelector('#name');
 const position = document.querySelector('#position');
-const cardName = document.querySelector('.card__name');
-const cardPosition = document.querySelector('.card__job-title');
+// const cardName = document.querySelector('.card__name');
+// const cardPosition = document.querySelector('.card__job-title');
 
 function changeCardName() {
     console.log('llamando a changeCardText');
@@ -28,55 +28,41 @@ position.addEventListener('keyup', changeCardPosition);
 
 //..........Mostrar los iconos del card preview........//
 
-// const gitIcon = document.querySelector('.card__list--github');
-
 
 const inputEmail = document.querySelector('#email');
 const inputPhone = document.querySelector('#phone');
 const inputLinkedin = document.querySelector('#linkedin');
 const inputGit = document.querySelector('#git');
 
-
-
+const emailLink = document.querySelector('.card__list--icon-mail');
 const phoneLink = document.querySelector('.card__list--icon-phone');
 const linkedinLink = document.querySelector('.card__list--icon-linkedin');
 const githubLink = document.querySelector('.card__list--icon-github');
 
-// const emailIcon = document.querySelector('.card__list--email');
-// const phoneIcon = document.querySelector('.card__list--phone');
-// const linkedinIcon = document.querySelector('.card__list--linkedin');
-
-
-function addLink() {
-
-    const fill = document.querySelector('#email').value;
-    const emailLink = document.querySelector('.card__list--icon-email');
-
-    emailLink.href = fill
-}
-inputEmail.addEventListener('change', addLink)
-
 function showIconMail() {
     if (inputEmail.value.length > 0) {
         emailIcon.classList.remove('hidden');
+        emailLink.href = `mailto:${inputEmail.value}`;
     }
 }
 function showIconPhone() {
     if (inputPhone.value.length > 0) {
         phoneIcon.classList.remove('hidden');
+        phoneLink.href = `tel:${phoneValue}`;
     }
 }
 function showIconLinkedin() {
     if (inputLinkedin.value.length > 0) {
         linkedinIcon.classList.remove('hidden');
+        linkedinLink.href = `http://www.linkedin.com/in/${inputLinkedin.value}`;
     }
 }
 function showIconGit() {
     if (inputGit.value.length > 0) {
         githubIcon.classList.remove('hidden');
+        githubLink.href = `https://www.github.com/${inputGit.value}`
     }
 }
-
 
 inputEmail.addEventListener('keyup', showIconMail);
 inputPhone.addEventListener('keyup', showIconPhone);
