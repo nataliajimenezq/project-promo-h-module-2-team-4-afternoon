@@ -28,7 +28,7 @@ position.addEventListener('keyup', changeCardPosition);
 
 //..........Mostrar los iconos del card preview........//
 
-const gitIcon = document.querySelector('.card__list--github');
+// const gitIcon = document.querySelector('.card__list--github');
 
 
 const inputEmail = document.querySelector('#email');
@@ -36,31 +36,44 @@ const inputPhone = document.querySelector('#phone');
 const inputLinkedin = document.querySelector('#linkedin');
 const inputGit = document.querySelector('#git');
 
-function showIconMail() {
 
+
+const phoneLink = document.querySelector('.card__list--icon-phone');
+const linkedinLink = document.querySelector('.card__list--icon-linkedin');
+const githubLink = document.querySelector('.card__list--icon-github');
+
+// const emailIcon = document.querySelector('.card__list--email');
+// const phoneIcon = document.querySelector('.card__list--phone');
+// const linkedinIcon = document.querySelector('.card__list--linkedin');
+
+
+function addLink() {
+
+    const fill = document.querySelector('#email').value;
+    const emailLink = document.querySelector('.card__list--icon-email');
+
+    emailLink.href = fill
+}
+inputEmail.addEventListener('change', addLink)
+
+function showIconMail() {
     if (inputEmail.value.length > 0) {
         emailIcon.classList.remove('hidden');
     }
 }
-
 function showIconPhone() {
-
     if (inputPhone.value.length > 0) {
         phoneIcon.classList.remove('hidden');
     }
 }
-
 function showIconLinkedin() {
-
     if (inputLinkedin.value.length > 0) {
         linkedinIcon.classList.remove('hidden');
     }
 }
-
 function showIconGit() {
-
     if (inputGit.value.length > 0) {
-        gitIcon.classList.remove('hidden');
+        githubIcon.classList.remove('hidden');
     }
 }
 
