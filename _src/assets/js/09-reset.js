@@ -9,7 +9,9 @@ const resetButton = document.querySelector('.card__reset');
 // const githubIcon = document.querySelector('.card__list--github');
 
 const cardPhoto = document.querySelector('.card__photo');
+const createLink = document.querySelector('.form__create-link');
 const cardUrl = './assets/images/imelda.png';
+
 //const cardPosition = document.querySelector('.card__job-title');
 // const cardName = document.querySelector('.card__name');
 // const cardPosition = document.querySelector('.card__job-title');
@@ -39,6 +41,12 @@ function reset() {
     localStorage.removeItem('data');
     profileImage.style.backgroundImage = `url(${cardUrl})`;
     profilePreview.style.backgroundImage = `url(${cardUrl})`;
+    shareFormLink.innerHTML="";
+    createLink.classList.add('hidden');
+    shareButton.setAttribute('disabled', 'false');
+    shareButton.classList.remove('disabled');
+
+
     
 }
 

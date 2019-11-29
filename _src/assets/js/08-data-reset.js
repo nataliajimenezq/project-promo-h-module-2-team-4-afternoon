@@ -12,6 +12,9 @@ const linkedinIcon = document.querySelector('.card__list--linkedin');
 const githubIcon = document.querySelector('.card__list--github');
 
 
+
+
+
 function getData(){
 
 let nameValue = name.value;
