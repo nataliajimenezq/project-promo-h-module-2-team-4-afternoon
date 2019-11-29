@@ -26,9 +26,7 @@ function changeCardPosition() {
 name.addEventListener('keyup', changeCardName);
 position.addEventListener('keyup', changeCardPosition);
 
-//..........Mostrar los iconos del card preview........//
-
-const gitIcon = document.querySelector('.card__list--github');
+//Añadir los enlaces a los iconos y mostrarlos en el card preview
 
 
 const inputEmail = document.querySelector('#email');
@@ -36,34 +34,43 @@ const inputPhone = document.querySelector('#phone');
 const inputLinkedin = document.querySelector('#linkedin');
 const inputGit = document.querySelector('#git');
 
-function showIconMail() {
+const emailLink = document.querySelector('.card__list--icon-mail');
+const phoneLink = document.querySelector('.card__list--icon-phone');
+const linkedinLink = document.querySelector('.card__list--icon-linkedin');
+const githubLink = document.querySelector('.card__list--icon-github');
 
+function showIconMail() {
     if (inputEmail.value.length > 0) {
         emailIcon.classList.remove('hidden');
+        emailLink.href = `mailto:${inputEmail.value}`;
+    }else{
+        emailIcon.classList.add('hidden');
     }
 }
-
 function showIconPhone() {
-
     if (inputPhone.value.length > 0) {
         phoneIcon.classList.remove('hidden');
+        phoneLink.href = `tel:${phoneValue}`;
+    }else{
+        phoneIcon.classList.add('hidden');
     }
 }
-
 function showIconLinkedin() {
-
     if (inputLinkedin.value.length > 0) {
         linkedinIcon.classList.remove('hidden');
+        linkedinLink.href = `http://www.linkedin.com/in/${inputLinkedin.value}`;
+    }else{
+        linkedinIcon.classList.add('hidden'); 
     }
 }
-
 function showIconGit() {
-
     if (inputGit.value.length > 0) {
-        gitIcon.classList.remove('hidden');
+        githubIcon.classList.remove('hidden');
+        githubLink.href = `https://www.github.com/${inputGit.value}`
+    }else{
+        githubIcon.classList.add('hidden');
     }
 }
-
 
 inputEmail.addEventListener('keyup', showIconMail);
 inputPhone.addEventListener('keyup', showIconPhone);

@@ -84,6 +84,7 @@
     }
 }
 .share__create-card{
+    text-align: center;
         &--text{
             text-align: center;
             font-size: rem(18);
@@ -94,8 +95,8 @@
             color:$color-orange;
             font-size:12px;
             margin:0;
-            text-align: center;
-            }
+            cursor:pointer;
+        }
         &--twitter{
             text-align: center;
             background-color:$color-azure;
@@ -109,7 +110,25 @@
             margin-top:10px;
             margin-bottom:30px;
             align-self:center;    
+            cursor:pointer;
         }
+}
+
+.error{
+    border: 1px groove red;
+    transition: border-color .5s ease-out;
+}
+
+.disabled{
+background-color:$color-silver;
+cursor: none;
+
+  }
+
+.errorMessage{
+    color: red;
+    text-align: center;
+    
 }
     
 

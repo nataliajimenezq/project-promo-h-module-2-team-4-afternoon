@@ -3,7 +3,7 @@
 //Función reset
 
 const resetButton = document.querySelector('.card__reset');
-// const emailIcon = document.querySelector('.card__list--email');
+// const emailIcon = document.querySelector('.card__list--email');º
 // const phoneIcon = document.querySelector('.card__list--phone');
 // const linkedinIcon = document.querySelector('.card__list--linkedin');
 // const githubIcon = document.querySelector('.card__list--github');
@@ -11,6 +11,8 @@ const resetButton = document.querySelector('.card__reset');
 const cardPhoto = document.querySelector('.card__photo');
 const cardUrl = './assets/images/imelda.png';
 //const cardPosition = document.querySelector('.card__job-title');
+// const cardName = document.querySelector('.card__name');
+// const cardPosition = document.querySelector('.card__job-title');
 
 function reset() {
     console.log('función reset');
