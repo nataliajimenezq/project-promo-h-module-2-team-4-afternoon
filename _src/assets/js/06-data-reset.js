@@ -10,7 +10,7 @@ const emailIcon = document.querySelector('.card__list--email');
 const phoneIcon = document.querySelector('.card__list--phone');
 const linkedinIcon = document.querySelector('.card__list--linkedin');
 const githubIcon = document.querySelector('.card__list--github');
-const colorSelected = document.querySelector('.color_selected');
+
 
 function getData(){
 
@@ -56,17 +56,21 @@ const showData = (data) =>{
         let palette = parseInt(data.palette) + 1;
         console.log(palette);
         card.classList.remove('clickTheme1', 'clickTheme2', 'clickTheme3', 'clickTheme4');
-        card.classList.add('palette' + palette);
         if(palette===1){
             colorpalette[0].checked = true;
+            card.classList.add('clickTheme4');
         }else if(palette===2){
             colorpalette[1].checked = true;
+            card.classList.add('clickTheme1');
         }else if(palette===3){
             colorpalette[2].checked = true;
+            card.classList.add('clickTheme2');
         }else{
             colorpalette[3].checked = true;
+            card.classList.add('clickTheme3');
         }
         
+        //card.classList.add(palette);
 
         const defaultInfo = {
             //palette: 4,
@@ -102,7 +106,6 @@ const keepData = () => {
 }
 
 keepData();
-colorSelected.addEventListener('change', getData);
 shareButton.addEventListener('click', getData);
 
 
