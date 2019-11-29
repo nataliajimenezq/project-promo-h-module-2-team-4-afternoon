@@ -14,14 +14,14 @@ const githubIcon = document.querySelector('.card__list--github');
 
 function getData(){
 
-const nameValue = name.value;
-const jobValue = position.value;
-const emailValue = inputEmail.value;
-const phonelValue = inputPhone.value;
-const linkedinValue = inputLinkedin.value;
-const githubValue = inputGit.value;
-const photoValue = profileImage.style.backgroundImage;
-const paletteValue = document.querySelector('.form-item:checked').value;
+let nameValue = name.value;
+let jobValue = position.value;
+let emailValue = inputEmail.value;
+let phonelValue = inputPhone.value;
+let linkedinValue = inputLinkedin.value;
+let githubValue = inputGit.value;
+let photoValue = profileImage.style.backgroundImage;
+let paletteValue = document.querySelector('.form-item:checked').value;
 
 
 const data = {
@@ -51,8 +51,8 @@ const showData = (data) =>{
         profileImage.style.backgroundImage = data.photoUrl;
         profilePreview.style.backgroundImage = data.photoUrl;
         //pintamos los datos en los radios buttons y en la paleta
-        paletteValue = data.palette;
-        console.log(paletteValue);
+        //paletteValue = data.palette;
+        //console.log(paletteValue);
         let palette = parseInt(data.palette) + 1;
         console.log(palette);
         card.classList.remove('clickTheme1', 'clickTheme2', 'clickTheme3', 'clickTheme4');
