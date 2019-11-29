@@ -43,24 +43,32 @@ function showIconMail() {
     if (inputEmail.value.length > 0) {
         emailIcon.classList.remove('hidden');
         emailLink.href = `mailto:${inputEmail.value}`;
+    }else{
+        emailIcon.classList.add('hidden');
     }
 }
 function showIconPhone() {
     if (inputPhone.value.length > 0) {
         phoneIcon.classList.remove('hidden');
         phoneLink.href = `tel:${phoneValue}`;
+    }else{
+        phoneIcon.classList.add('hidden');
     }
 }
 function showIconLinkedin() {
     if (inputLinkedin.value.length > 0) {
         linkedinIcon.classList.remove('hidden');
         linkedinLink.href = `http://www.linkedin.com/in/${inputLinkedin.value}`;
+    }else{
+        linkedinIcon.classList.add('hidden'); 
     }
 }
 function showIconGit() {
     if (inputGit.value.length > 0) {
         githubIcon.classList.remove('hidden');
         githubLink.href = `https://www.github.com/${inputGit.value}`
+    }else{
+        githubIcon.classList.add('hidden');
     }
 }
 
