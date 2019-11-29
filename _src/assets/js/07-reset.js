@@ -6,8 +6,8 @@ const phoneIcon = document.querySelector('.card__list--phone');
 const linkedinIcon = document.querySelector('.card__list--linkedin');
 const githubIcon = document.querySelector('.card__list--github');
 
-//const cardName = document.querySelector('.card__name');
-//const cardPosition = document.querySelector('.card__job-title');
+// const cardName = document.querySelector('.card__name');
+// const cardPosition = document.querySelector('.card__job-title');
 
 function reset() {
     console.log('función reset');
