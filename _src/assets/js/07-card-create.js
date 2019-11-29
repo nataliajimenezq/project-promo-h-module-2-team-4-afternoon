@@ -58,23 +58,6 @@ const sendInfo = () => {
   }
 }
 
-
-//peticion
-
-/* function sendFetch() {
-  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
-    method: 'POST',
-    body: JSON.stringify(userData),
-    headers: {
-      'content-type': 'application/json'
-    },
-  })
-    .then(response => response.json())
-    .then(data => showUrlUser(data))
-    .catch(function (error) { console.log(error); });
-
-} */
-
 function showUrlUser(data) {
 
   const elementLink = document.createElement('a');
@@ -82,16 +65,25 @@ function showUrlUser(data) {
   if (data.success) {
     shareForm.classList.remove('hidden')
     elementLink.setAttribute('href', `${data.cardURL}`);
-    elementLink.setAttribute('class', 'share__create-card');
+    elementLink.classList.add('share__create-card--link');
     elementLink.setAttribute('target', '_blank');
     elementLink.innerHTML=`${data.cardURL}`;
- 
     shareFormLink.appendChild(elementLink);
+    shareTwitter(data.cardURL);
   } else {
     data.error.innerHTML = '';
     /* const textLink = document.createTextNode(`ERROR: ${data.error}.`);
     error.appendChild(textLink); */
   }
+  
 };
+
+function shareTwitter (cardURL){
+  const urlTwitter = encodeURIComponent ('He creado está tarjeta con ColoLab Awesome Profile Cards. ¿Qué te parece?');
+  const hastagTwitter = encodeURIComponent ('adalab, adalaber, frontend, awesomeCards, CocoLab, promocionHamilton');
+  const urlResult = `https://twitter.com/intent/tweet?text=${urlTwitter}&url=${cardURL}&hashtags=${hastagTwitter}`;
+  document.querySelector ('.share__create-card--twitter').href= urlResult;
+}
+
 
 shareButton.addEventListener('click',sendInfo)
