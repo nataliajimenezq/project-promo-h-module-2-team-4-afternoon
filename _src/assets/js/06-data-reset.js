@@ -10,7 +10,7 @@ const emailIcon = document.querySelector('.card__list--email');
 const phoneIcon = document.querySelector('.card__list--phone');
 const linkedinIcon = document.querySelector('.card__list--linkedin');
 const githubIcon = document.querySelector('.card__list--github');
-
+const colorSelected = document.querySelector('.color_selected');
 
 function getData(){
 
@@ -52,9 +52,11 @@ const showData = (data) =>{
         profilePreview.style.backgroundImage = data.photoUrl;
         //pintamos los datos en los radios buttons y en la paleta
         paletteValue = data.palette;
-        let palette = parseInt(data.palette) +1;
+        console.log(paletteValue);
+        let palette = parseInt(data.palette) + 1;
+        console.log(palette);
         card.classList.remove('clickTheme1', 'clickTheme2', 'clickTheme3', 'clickTheme4');
-        card.classList.add('palette'+palette);
+        card.classList.add('palette' + palette);
         if(palette===1){
             colorpalette[0].checked = true;
         }else if(palette===2){
@@ -64,9 +66,10 @@ const showData = (data) =>{
         }else{
             colorpalette[3].checked = true;
         }
+        
 
         const defaultInfo = {
-            palette: 4,
+            //palette: 4,
             cardName : 'Nombre Apellido',
             cardPosition : 'Front end developer',
             inputEmail : '',
@@ -99,6 +102,7 @@ const keepData = () => {
 }
 
 keepData();
+colorSelected.addEventListener('change', getData);
 shareButton.addEventListener('click', getData);
 
 

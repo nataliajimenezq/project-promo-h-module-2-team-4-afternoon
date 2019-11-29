@@ -2,9 +2,8 @@
 
 const card = document.querySelector('.card__box');
 let colorpalette = document.getElementsByName('palette');
-
 console.log(card);
-
+card.classList.add('theme-colors4');
 function changeColor() {
     for(let i = 0; i <= 4; i++){
         if(colorpalette[0].checked){

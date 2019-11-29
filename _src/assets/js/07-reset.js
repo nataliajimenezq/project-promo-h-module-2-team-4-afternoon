@@ -9,9 +9,8 @@ const resetButton = document.querySelector('.card__reset');
 // const githubIcon = document.querySelector('.card__list--github');
 
 const cardPhoto = document.querySelector('.card__photo');
+const cardUrl = './assets/images/imelda.png';
 //const cardPosition = document.querySelector('.card__job-title');
-
-
 
 function reset() {
     console.log('función reset');
@@ -35,9 +34,10 @@ function reset() {
     clickTheme1.checked = false;
     clickTheme2.checked = false;
     clickTheme3.checked = false;
-    cardPhoto.classList.add('card__photo');
     localStorage.removeItem('data');
+    profileImage.style.backgroundImage = `url(${cardUrl})`;
+    profilePreview.style.backgroundImage = `url(${cardUrl})`;
+    
 }
-
 
 resetButton.addEventListener('click', reset);

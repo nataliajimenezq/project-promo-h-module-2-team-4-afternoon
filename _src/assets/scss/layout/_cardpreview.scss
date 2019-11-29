@@ -2,7 +2,7 @@
     height: 457px;
     background-image: url('../images/fondo.png');
     background-size: cover;
-    //background: linear-gradient(to bottom, $color-silver, $color-pale-grey);
+    //background: linear-gradient(to bottom, $color-silver, $color-pale-grey); (Fondo antiguo) 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +61,7 @@
   }
 
 .card__box--text {
-    border-left: solid 5px $color-yelow-coco;
+    border-left: solid 5px; //$color-yelow-coco;
     padding-left: 15px;
   }
 
@@ -70,7 +70,7 @@
     font-weight: bold;
     font-size: rem(18);
     line-height: 20px;
-    color: $color-blue-coco;
+    //color: $color-blue-coco;
     margin: 0;
     padding-bottom: 4px;
     overflow: hidden;
@@ -81,7 +81,7 @@
     font-family: $font-family-cards;
     font-size: 16px;
     line-height: 20px;
-    color: $color-blue-coco;
+    //color: $color-blue-coco;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -108,7 +108,7 @@
 .item {
     width: 32px;
     height:32px;
-    border:2px solid $color-pink-coco;
+    border:2px solid; //$color-pink-coco;
     border-radius: 50%;
     margin-right:10px;
     display:flex;
