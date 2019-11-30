@@ -3,31 +3,32 @@
 const card = document.querySelector('.card__box');
 let colorpalette = document.getElementsByName('palette');
 console.log(card);
+// colorpalette[0].checked = true;
 card.classList.add('theme-colors4');
 function changeColor() {
-    for(let i = 0; i <= 4; i++){
-        if(colorpalette[0].checked){
-            card.classList.add('theme-colors4');
-            card.classList.remove('theme-colors2');
-            card.classList.remove('theme-colors3');
-            card.classList.remove('theme-colors1');
-        } else if(colorpalette[1].checked){
-            card.classList.add('theme-colors1');
-            card.classList.remove('theme-colors2');
-            card.classList.remove('theme-colors3');
-            card.classList.remove('theme-colors4');
-        } else if(colorpalette[2].checked){
-            card.classList.add('theme-colors2');
-            card.classList.remove('theme-colors1');
-            card.classList.remove('theme-colors3');
-            card.classList.remove('theme-colors4');
-        } else  if(colorpalette[3].checked){
-            card.classList.add('theme-colors3');
-            card.classList.remove('theme-colors2');
-            card.classList.remove('theme-colors1');
-            card.classList.remove('theme-colors4');
-        }
+  for(let i = 0; i <= 4; i++){
+    if(colorpalette[0].checked){
+      card.classList.add('theme-colors4');
+      card.classList.remove('theme-colors2');
+      card.classList.remove('theme-colors3');
+      card.classList.remove('theme-colors1');
+    } else if(colorpalette[1].checked){
+      card.classList.add('theme-colors1');
+      card.classList.remove('theme-colors2');
+      card.classList.remove('theme-colors3');
+      card.classList.remove('theme-colors4');
+    } else if(colorpalette[2].checked){
+      card.classList.add('theme-colors2');
+      card.classList.remove('theme-colors1');
+      card.classList.remove('theme-colors3');
+      card.classList.remove('theme-colors4');
+    } else  if(colorpalette[3].checked){
+      card.classList.add('theme-colors3');
+      card.classList.remove('theme-colors2');
+      card.classList.remove('theme-colors1');
+      card.classList.remove('theme-colors4');
     }
+  }
 }
 document.addEventListener('click', changeColor);
 
