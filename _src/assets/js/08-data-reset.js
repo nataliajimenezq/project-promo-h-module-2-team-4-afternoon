@@ -65,7 +65,7 @@ const showData = (data) =>{
         //console.log(paletteValue);
         //pintamos los datos en los radios buttons y en la paleta
         let palette = parseInt(data.palette);
-        console.log(palette);
+        //console.log(palette);
         card.classList.remove('clickTheme1', 'clickTheme2', 'clickTheme3', 'clickTheme4');
         if(palette===4){
             colorpalette[0].checked = true;
@@ -89,19 +89,34 @@ const showData = (data) =>{
         // };
         
         //pintamos los datos en la tarjeta
-        name.value === '' ? cardName.innerHTML = 'Nombre Apellido' : cardName.innerHTML = name.value;
-        position.value === '' ? cardPosition.innerHTML = 'Front end developer' : cardPosition.innerHTML = position.value;
-
-        //data.phone === '' ? phoneIcon.href = '' : phoneIcon.href = data.phone;
-        emailIcon.classList.remove('hidden');
-        phoneIcon.classList.remove('hidden');
-        linkedinIcon.classList.remove('hidden');
-        githubIcon.classList.remove('hidden');
-        // data.email === '' ? document.querySelector('.js-email').href = '' : document.querySelector('.js-email').href = 'mailto:' + data.email;
-        // data.linkedin === '' ? document.querySelector('.js-linkedin').href = '' : document.querySelector('.js-linkedin').href = 'https://www.linkedin.com/in/' + data.linkedin;
-        // data.github === '' ? document.querySelector('.js-github').href = '' : document.querySelector('.js-github').href = 'https://github.com/' + data.github;
-
-
+        data.name === '' ? cardName.innerHTML = 'Nombre Apellido' : cardName.innerHTML = data.name;
+        data.job === '' ? cardPosition.innerHTML = 'Front end developer' : cardPosition.innerHTML = data.job;
+        data.phone === '' ? (
+            phoneLink.href = '')
+        : (
+            phoneLink.href = `tel:${data.phone}`,
+            phoneIcon.classList.remove('hidden')
+        );
+        data.email === '' ? ( 
+            emailLink.href = '')
+        : ( 
+            emailLink.href = `mailto:${data.email}`,
+            emailIcon.classList.remove('hidden')
+        );
+        data.linkedin === '' ? (
+            linkedinLink.href = '')
+        : (
+            linkedinLink.href = `http://www.linkedin.com/in/${data.linkedin}`, 
+            //linkedinLink.target='_blank',
+            linkedinIcon.classList.remove('hidden')
+        );
+        data.github === '' ? ( 
+            githubLink.href = '')
+        : (
+            githubLink.href = `https://www.github.com/${data.github}`,
+            //githubLink.target='_blank',
+            githubIcon.classList.remove('hidden')
+        );
     }
 
 }

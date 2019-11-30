@@ -117,8 +117,8 @@
     font-weight: 600;   
     
     &:hover{
-        color: #438792;
-        background-color: $color-white;
+        color: $color-white;
+        background-color: $color-orange;
         transform: rotateY(130deg);
     }
 }
