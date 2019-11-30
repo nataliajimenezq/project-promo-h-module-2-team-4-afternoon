@@ -23,10 +23,11 @@ const sendInfo = () => {
 
   const sendPhoto=fr.result;
   console.log(sendPhoto);
+  const finalPalette=document.querySelector(('input[name="palette"]:checked'));
 
   const userData = {
 
-    "palette": colorpalette.value,
+    "palette": finalPalette.value,
     "name": name.value,
     "job": position.value,
     "phone": inputPhone.value,
