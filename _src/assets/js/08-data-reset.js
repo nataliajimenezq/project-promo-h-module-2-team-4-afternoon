@@ -11,12 +11,12 @@ const phoneIcon = document.querySelector('.card__list--phone');
 const linkedinIcon = document.querySelector('.card__list--linkedin');
 const githubIcon = document.querySelector('.card__list--github');
 
-
-
-
-
-function getData(){
-
+//sobre el que se ejecuta las funciones del localstorage
+const formFill = document.querySelector('#form__fill');
+const formDesing = document.querySelector('#form_desing');
+//funcion que obtiene los values del form y los guarda en localStorage tiene que estar dentro de la funcion
+function setData(){
+//datos introducidos por el usuario en el formulario almacenados en variables para pasarlos a objeto
 let nameValue = name.value;
 let jobValue = position.value;
 let emailValue = inputEmail.value;
@@ -26,7 +26,7 @@ let githubValue = inputGit.value;
 let photoValue = profileImage.style.backgroundImage;
 let paletteValue = document.querySelector('.form-item:checked').value;
 
-
+//creamos objeto con los values del form
 const data = {
     name: nameValue,
     job: jobValue,
@@ -38,10 +38,18 @@ const data = {
     palette: paletteValue
 
 };
-
+//al ser un objeto lo convertimos a una cadena de texto JSON para guardarlo en el local
 localStorage.setItem('data', JSON.stringify(data));
 }
 
+//funcion que devuelve el objeto guardado en el localstorage y se la envia a showData para mostrarla
+const getData = () => {
+    const data = JSON.parse(localStorage.getItem('data'));
+    showData(data);
+}
+
+
+//al refrescar la pagina los datos nos vienen del local y deben aparecer pintados en su correspondiente lugar
 const showData = (data) =>{
     if(data){
         //asignamos los datos guardados al formulario
@@ -53,41 +61,36 @@ const showData = (data) =>{
         inputGit.value = data.github;
         profileImage.style.backgroundImage = data.photoUrl;
         profilePreview.style.backgroundImage = data.photoUrl;
-        //pintamos los datos en los radios buttons y en la paleta
         //paletteValue = data.palette;
         //console.log(paletteValue);
-        let palette = parseInt(data.palette) + 1;
+        //pintamos los datos en los radios buttons y en la paleta
+        let palette = parseInt(data.palette);
         console.log(palette);
         card.classList.remove('clickTheme1', 'clickTheme2', 'clickTheme3', 'clickTheme4');
-        if(palette===1){
+        if(palette===4){
             colorpalette[0].checked = true;
-            card.classList.add('clickTheme4');
-        }else if(palette===2){
+        }else if(palette===1){
             colorpalette[1].checked = true;
-            card.classList.add('clickTheme1');
-        }else if(palette===3){
+        }else if(palette===2){
             colorpalette[2].checked = true;
-            card.classList.add('clickTheme2');
         }else{
             colorpalette[3].checked = true;
-            card.classList.add('clickTheme3');
         }
-        
-        //card.classList.add(palette);
+        changeColor();
 
-        const defaultInfo = {
-            //palette: 4,
-            cardName : 'Nombre Apellido',
-            cardPosition : 'Front end developer',
-            inputEmail : '',
-            inputPhone : '',
-            inputLinkedin : '',
-            inputGit : '',
-        };
+        // const defaultInfo = {
+        //     //palette: 4,
+        //     cardName : 'Nombre Apellido',
+        //     cardPosition : 'Front end developer',
+        //     inputEmail : '',
+        //     inputPhone : '',
+        //     inputLinkedin : '',
+        //     inputGit : '',
+        // };
         
         //pintamos los datos en la tarjeta
-        name.value === '' ? cardName.innerHTML = defaultInfo.cardName : cardName.innerHTML = name.value;
-        position.value === '' ? cardPosition.innerHTML = defaultInfo.cardPosition : cardPosition.innerHTML = position.value;
+        name.value === '' ? cardName.innerHTML = 'Nombre Apellido' : cardName.innerHTML = name.value;
+        position.value === '' ? cardPosition.innerHTML = 'Front end developer' : cardPosition.innerHTML = position.value;
 
         //data.phone === '' ? phoneIcon.href = '' : phoneIcon.href = data.phone;
         emailIcon.classList.remove('hidden');
@@ -103,13 +106,13 @@ const showData = (data) =>{
 
 }
 
-const keepData = () => {
-    const data = JSON.parse(localStorage.getItem('data'));
-    showData(data);
-}
 
-keepData();
-shareButton.addEventListener('click', getData);
+//evento que guarda en localstorage los inputs del formulario al pulsar las teclas
+//ahora el value de los radio se guarda cuando se pulsa las teclas al escribir en los inputs
+formFill.addEventListener('keyup', setData);
+formDesing.addEventListener('change', setData);
+//evento que se ejecuta al cargar la página y llama a la función que devuelve y pinta los values guardados en localStorage
+window.addEventListener('load', getData);
 
 
 
