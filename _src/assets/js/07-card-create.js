@@ -1,3 +1,4 @@
+'use strict';
 
 //boton crear tarjeta
 const shareButton = document.querySelector('#share_btn');
@@ -26,7 +27,6 @@ const sendInfo = () => {
   const finalPalette=document.querySelector(('input[name="palette"]:checked'));
 
   const userData = {
-
     "palette": finalPalette.value,
     "name": name.value,
     "job": position.value,
@@ -87,4 +87,4 @@ function shareTwitter (cardURL){
 }
 
 
-shareButton.addEventListener('click',sendInfo)
+shareButton.addEventListener('click',sendInfo);

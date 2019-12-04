@@ -1,10 +1,10 @@
-//Función para cambiar los colores de la tarjeta
+'use strict';
 
 const card = document.querySelector('.card__box');
 let colorpalette = document.getElementsByName('palette');
-console.log(card);
-// colorpalette[0].checked = true;
 card.classList.add('theme-colors4');
+
+//Función para cambiar los colores de la tarjeta
 function changeColor() {
   for(let i = 0; i <= 4; i++){
     if(colorpalette[0].checked){

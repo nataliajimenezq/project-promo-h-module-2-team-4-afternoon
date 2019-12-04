@@ -115,20 +115,18 @@
 }
 
 .error{
-    border: 1px groove red;
+    border: 1px groove $color-red;
     transition: border-color .5s ease-out;
 }
 
 .disabled{
-background-color:$color-silver;
-cursor: none;
-
-  }
+    background-color:$color-silver;
+    cursor: none;
+}
 
 .errorMessage{
-    color: red;
+    color: $color-red;
     text-align: center;
-    
 }
     
 

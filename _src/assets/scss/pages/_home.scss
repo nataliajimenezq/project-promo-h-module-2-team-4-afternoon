@@ -91,7 +91,7 @@
     }
 
     .main_text-item{
-       margin-top: 0px;
+        margin-top: 0px;
         margin-bottom: 0px;
         color: $color-gun-metal;
         font-family: $font-family-general;
@@ -117,8 +117,8 @@
     font-weight: 600;   
     
     &:hover{
-        color: #438792;
-        background-color: $color-white;
+        color: $color-white;
+        background-color: $color-orange;
         transform: rotateY(130deg);
     }
 }
