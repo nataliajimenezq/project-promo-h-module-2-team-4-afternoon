@@ -115,20 +115,20 @@
 }
 
 .error{
-    border: 1px groove red;
-    transition: border-color .5s ease-out;
+    border: 1px solid red;
+}
+.able {
+    border:1px solid $color-hospital-green;
 }
 
 .disabled{
 background-color:$color-silver;
 cursor: none;
-
   }
 
 .errorMessage{
     color: red;
-    text-align: center;
-    
+    text-align: center;   
 }
     
 
