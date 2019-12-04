@@ -3,7 +3,7 @@
 const card = document.querySelector('.card__box');
 let colorpalette = document.getElementsByName('palette');
 card.classList.add('theme-colors4');
-
+colorpalette[0].checked = true;
 //Función para cambiar los colores de la tarjeta
 function changeColor() {
   for(let i = 0; i <= 4; i++){
