@@ -1,3 +1,4 @@
+'use strict';
 
 const nameValue = name.value;
 const jobValue = position.value;

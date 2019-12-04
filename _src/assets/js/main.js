@@ -1,6 +1,6 @@
 //'use strict';
 /*
-Código de Stefany para bucle que cambiar color en la tarjeta:
+Código de Stefany para bucle que cambia color en la tarjeta:
 
 let pcolor = document.querySelector('.color');
 let radioColors = document.getElementsByName('color');

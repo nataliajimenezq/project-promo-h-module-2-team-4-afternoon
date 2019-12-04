@@ -1,6 +1,6 @@
 'use strict';
 
-// import { createDecipher } from "crypto";
+
 const clickTheme1 = document.querySelector('#colorpalette1');
 const clickTheme2 = document.querySelector('#colorpalette2');
 const clickTheme3 = document.querySelector('#colorpalette3');
@@ -20,7 +20,7 @@ function setData(){
 let nameValue = name.value;
 let jobValue = position.value;
 let emailValue = inputEmail.value;
-let phonelValue = inputPhone.value;
+let phoneValue = inputPhone.value;
 let linkedinValue = inputLinkedin.value;
 let githubValue = inputGit.value;
 let photoValue = profileImage.style.backgroundImage;
@@ -31,7 +31,7 @@ const data = {
     name: nameValue,
     job: jobValue,
     email: emailValue,
-    phone: phonelValue,
+    phone: phoneValue,
     linkedin: linkedinValue,
     github: githubValue,
     photoUrl: photoValue,
@@ -106,19 +106,17 @@ const showData = (data) =>{
         data.linkedin === '' ? (
             linkedinLink.href = '')
         : (
-            linkedinLink.href = `http://www.linkedin.com/in/${data.linkedin}`, 
-            //linkedinLink.target='_blank',
+            linkedinLink.href = `http://www.linkedin.com/in/${data.linkedin}`,
             linkedinIcon.classList.remove('hidden')
         );
         data.github === '' ? ( 
             githubLink.href = '')
         : (
             githubLink.href = `https://www.github.com/${data.github}`,
-            //githubLink.target='_blank',
             githubIcon.classList.remove('hidden')
         );
     }
-
+    changecolor();
 }
 
 
@@ -129,6 +127,11 @@ formDesing.addEventListener('change', setData);
 //evento que se ejecuta al cargar la página y llama a la función que devuelve y pinta los values guardados en localStorage
 window.addEventListener('load', getData);
 
+//evento que guarda en localstorage los inputs del formulario al pulsar las teclas
+formFill.addEventListener('keyup', setData);
+formDesing.addEventListener('change', setData);
+//evento que se ejecuta al cargar la página y llama a la función que devuelve y pinta los values guardados en localStorage
+window.addEventListener('load', getData);
 
 
 
