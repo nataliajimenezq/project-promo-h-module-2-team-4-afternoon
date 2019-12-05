@@ -37,8 +37,9 @@ const sendInfo = () => {
   const sendPhoto = fr.result;
   console.log(sendPhoto);
   const finalPalette = document.querySelector(('input[name="palette"]:checked'));
-
+  console.log(finalPalette)
   const userData = {
+    "palette": finalPalette.value,
     "name": name.value,
     "job": position.value,
     "phone": inputPhone.value,
