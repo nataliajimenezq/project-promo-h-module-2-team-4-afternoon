@@ -16,9 +16,14 @@ function ValidateEmail() {
 }
 
 const validation = () => {
+
   let hasErrors = false;
   for (let input of elementInputs) {
-    if (input.value === "" && input.pattern !== '') {
+    console.log(input);
+    console.log(input.value === "")
+    console.log(input.pattern !== '')
+    if (input.value === "" && inputPhone.value !== '') {
+
       hasErrors = true;
       input.classList.remove('able');
       input.classList.add('error');
