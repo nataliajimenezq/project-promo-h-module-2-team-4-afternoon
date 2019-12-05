@@ -6,14 +6,21 @@ const shareForm = document.querySelector('#share-div');
 const elementError = document.querySelector('.errorMessage');
 const elementInputs = document.querySelectorAll('input');
 const label = document.querySelector('label');
-const shareFormLink =document.querySelector('.share__create-card'); 
+const shareFormLink = document.querySelector('.share__create-card');
 
+function ValidateEmail() {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value)) {
+    return (true);
+  }
+  return (false);
+}
 
 const validation = () => {
   let hasErrors = false;
   for (let input of elementInputs) {
-    if (input.value === "" && input.type !== 'tel') {
+    if (input.value === "" && input.pattern !== '') {
       hasErrors = true;
+      input.classList.remove('able');
       input.classList.add('error');
     }
   };
@@ -22,9 +29,9 @@ const validation = () => {
 
 const sendInfo = () => {
 
-  const sendPhoto=fr.result;
+  const sendPhoto = fr.result;
   console.log(sendPhoto);
-  const finalPalette=document.querySelector(('input[name="palette"]:checked'));
+  const finalPalette = document.querySelector(('input[name="palette"]:checked'));
 
   const userData = {
     "palette": finalPalette.value,
@@ -37,11 +44,21 @@ const sendInfo = () => {
     "photo": sendPhoto
   };
 
-  if (validation()) {
+  if (validation() === false) {
+    elementError.innerHTML = '*Rellene todos los campos obligatorios.';
+  } else if (ValidateEmail() === false) {
+    elementError.innerHTML = '*Ingrese un correo válido.';
+  } else {
     elementError.innerHTML = '';
     shareButton.classList.add('disabled');
     shareButton.setAttribute('disabled', 'true');
     shareForm.classList.remove('hidden');
+    for (let input of elementInputs) {
+      if (input.value !== '') {
+        input.classList.remove('error');
+        input.classList.add('able');
+      }
+    }
 
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
       method: 'POST',
@@ -52,10 +69,7 @@ const sendInfo = () => {
     })
       .then(response => response.json())
       .then(data => showUrlUser(data))
-      .catch(function (error) { console.log(error)})
-
-  } else {
-    elementError.innerHTML = '*Rellene todos los campos obligatorios.';
+      .catch(function (error) { console.log(error) })
   }
 }
 
@@ -68,23 +82,21 @@ function showUrlUser(data) {
     elementLink.setAttribute('href', `${data.cardURL}`);
     elementLink.classList.add('share__create-card--link');
     elementLink.setAttribute('target', '_blank');
-    elementLink.innerHTML=`${data.cardURL}`;
+    elementLink.innerHTML = `${data.cardURL}`;
     shareFormLink.appendChild(elementLink);
     shareTwitter(data.cardURL);
   } else {
     data.error.innerHTML = '';
-    /* const textLink = document.createTextNode(`ERROR: ${data.error}.`);
-    error.appendChild(textLink); */
   }
-  
+
 };
 
-function shareTwitter (cardURL){
-  const urlTwitter = encodeURIComponent ('He creado está tarjeta con ColoLab Awesome Profile Cards. ¿Qué te parece?');
-  const hastagTwitter = encodeURIComponent ('adalab, adalaber, frontend, awesomeCards, CocoLab, promocionHamilton');
+function shareTwitter(cardURL) {
+  const urlTwitter = encodeURIComponent('He creado está tarjeta con ColoLab Awesome Profile Cards. ¿Qué te parece?');
+  const hastagTwitter = encodeURIComponent('adalab, adalaber, frontend, awesomeCards, CocoLab, promocionHamilton');
   const urlResult = `https://twitter.com/intent/tweet?text=${urlTwitter}&url=${cardURL}&hashtags=${hastagTwitter}`;
-  document.querySelector ('.share__create-card--twitter').href= urlResult;
+  document.querySelector('.share__create-card--twitter').href = urlResult;
 }
 
 
-shareButton.addEventListener('click',sendInfo);
+shareButton.addEventListener('click', sendInfo);
