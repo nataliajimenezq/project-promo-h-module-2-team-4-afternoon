@@ -1,5 +1,3 @@
-'use strict';
-
 
 const clickTheme1 = document.querySelector('#colorpalette1');
 const clickTheme2 = document.querySelector('#colorpalette2');
@@ -116,7 +114,7 @@ const showData = (data) =>{
             githubIcon.classList.remove('hidden')
         );
     }
-    changecolor();
+    //changecolor();
 }
 
 
@@ -127,11 +125,7 @@ formDesing.addEventListener('change', setData);
 //evento que se ejecuta al cargar la página y llama a la función que devuelve y pinta los values guardados en localStorage
 window.addEventListener('load', getData);
 
-//evento que guarda en localstorage los inputs del formulario al pulsar las teclas
-formFill.addEventListener('keyup', setData);
-formDesing.addEventListener('change', setData);
-//evento que se ejecuta al cargar la página y llama a la función que devuelve y pinta los values guardados en localStorage
-window.addEventListener('load', getData);
+
 
 
 

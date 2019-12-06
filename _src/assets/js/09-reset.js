@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 const resetButton = document.querySelector('.card__reset');
 const cardPhoto = document.querySelector('.card__photo');
