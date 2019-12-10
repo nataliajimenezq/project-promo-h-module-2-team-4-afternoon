@@ -97,8 +97,8 @@ function showUrlUser(data) {
 };
 
 function shareTwitter(cardURL) {
-  const urlTwitter = encodeURIComponent('He creado está tarjeta con ColoLab Awesome Profile Cards. ¿Qué te parece?');
-  const hastagTwitter = encodeURIComponent('adalab, adalaber, frontend, awesomeCards, CocoLab, promocionHamilton');
+  const urlTwitter = encodeURIComponent('He creado está tarjeta con CocoLab Awesome Profile Cards. ¿Qué te parece?');
+  const hastagTwitter = encodeURIComponent('adalab, adalaber, frontend, awesomeCards, CocoLab, promocionHamilton, CocoLabCard');
   const urlResult = `https://twitter.com/intent/tweet?text=${urlTwitter}&url=${cardURL}&hashtags=${hastagTwitter}`;
   document.querySelector('.share__create-card--twitter').href = urlResult;
 }

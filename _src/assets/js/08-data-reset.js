@@ -76,15 +76,6 @@ const showData = (data) =>{
         }
         changeColor();
 
-        // const defaultInfo = {
-        //     //palette: 4,
-        //     cardName : 'Nombre Apellido',
-        //     cardPosition : 'Front end developer',
-        //     inputEmail : '',
-        //     inputPhone : '',
-        //     inputLinkedin : '',
-        //     inputGit : '',
-        // };
         
         //pintamos los datos en la tarjeta
         data.name === '' ? cardName.innerHTML = 'Nombre Apellido' : cardName.innerHTML = data.name;
@@ -113,8 +104,7 @@ const showData = (data) =>{
             githubLink.href = `https://www.github.com/${data.github}`,
             githubIcon.classList.remove('hidden')
         );
-    }
-    //changecolor();
+    };
 }
 
 
